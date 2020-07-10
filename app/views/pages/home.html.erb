@@ -1,0 +1,32 @@
+<h1>Reporting</h1>
+<p>Nombre de clients uniques : <%= @nbr_uniq_clients %></p>
+<p>Nombre de commandes : <%= @nbr_uniq_orders %></p>
+<p>Nombre de livraisons clicks & collect : <%= @nbr_delivery_clik_and_collect %></p>
+<p>Nombre de livraisons par les commerçants : <%= @nbr_delivery_shopkeeper %></p>
+<p>Nombre de livraisons par la poste : <%= @nbr_delivery_la_poste %></p>
+<h2>Commandes par client :</h2>
+<table>
+  <tr>
+    <th>Clients</th>
+    <th>Nombre de commandes</th>
+  </tr>
+  <% @orders_per_client.each do |key, value| %>
+    <tr>
+      <td><%= key %></td>
+      <td><%= value %></td>
+    </tr>
+  <% end %>
+</table>
+<h2>Visites par mois :</h2>
+<table>
+  <tr>
+    <th>Mois</th>
+    <th>Visites</th>
+  </tr>
+  <% @visits_per_month.each do |key, value| %>
+    <tr>
+      <td><%= key %></td>
+      <td><%= value %></td>
+    </tr>
+  <% end %>
+</table>
